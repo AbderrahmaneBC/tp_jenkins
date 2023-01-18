@@ -10,6 +10,7 @@ pipeline {
         trendsLimit: 10
         
       }
+    }
       
        stage('Code Analysis'){
       steps {
