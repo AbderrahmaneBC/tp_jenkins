@@ -44,6 +44,14 @@ pipeline {
       } 
     }
     
+    
+    stage("Notification") {
+      steps {
+          notifyEvents message: 'Good morning <b>Abderrahamne</b>', token: '8rFrh3GUQoCiwTENEgytE6Ed5BfH0BDc'
+      } 
+    }
+
+    
 }
 
 }
