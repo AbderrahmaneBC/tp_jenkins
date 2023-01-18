@@ -8,6 +8,7 @@ pipeline {
         cucumber reportTitle: 'Raport',
         fileIncludePattern: 'target/report.json',
         trendsLimit: 10
+        junit'build/test-results/test/TEST-Matrix.xml'
         
       }
     }
