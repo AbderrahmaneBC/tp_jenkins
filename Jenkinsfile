@@ -21,7 +21,11 @@ pipeline {
       }
       
       
-      
+      stage("Code Quality") {
+      steps {
+          waitForQualityGate abortPipeline: true
+      }
+    }
       
       
       
