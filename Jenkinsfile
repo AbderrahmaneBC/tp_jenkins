@@ -3,13 +3,28 @@ pipeline {
   stages {
     stage('test'){
       steps {
-      bat 'gradlew test'
-       archiveArtifacts 'build/test-results/'
+        bat 'gradlew test'
+        archiveArtifacts 'build/test-results/'
         cucumber reportTitle: 'Raport',
         fileIncludePattern: 'target/report.json',
         trendsLimit: 10
         
       }
+      
+       stage('Code Analysis'){
+      steps {
+        withSonarQubeEnv('sonar')
+        bat 'gradlew sonarqube'
+        
+      }
+      
+      
+      
+      
+      
+      
+      
+      
     }
     
 }
