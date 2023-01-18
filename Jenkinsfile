@@ -19,7 +19,7 @@ pipeline {
         bat 'gradlew sonarqube'
         }
       }
-      
+       }
       
       stage("Code Quality") {
       steps {
